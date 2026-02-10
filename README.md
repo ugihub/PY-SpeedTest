@@ -34,7 +34,10 @@ TB/
 ├── rag_manager.py           # Mistral AI RAG Analyzer (AI analysis & chatbot)
 ├── supabase_manager.py      # Database manager (Supabase + pgvector)
 ├── requirements.txt         # Daftar dependencies Python
-└── speed_test_history.csv   # History hasil tes (auto-generated)
+├── speed_test_history.csv   # History hasil tes (auto-generated)
+└── Export .EXE/
+    ├── pyinstaller_spec.spec    # Konfigurasi PyInstaller untuk build EXE
+    └── pyi_rth_speedtest.py     # Runtime hook fix untuk PyInstaller
 ```
 
 ---
@@ -75,6 +78,18 @@ TB/
    ```bash
    python pyspeedtest.pyw
    ```
+
+### Opsi 2: Jalankan EXE (Tanpa Install Python)
+
+langsung download file .exe dari **Releases**
+
+### Build EXE dari Source
+
+```bash
+pyinstaller pyinstaller_spec.spec --clean --noconfirm
+```
+Hasil build akan tersedia di folder `dist/`.
+
 ---
 
 ## 🏗️ Arsitektur Aplikasi
